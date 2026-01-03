@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ISHUU WIN AADHIL  🎧</title>
+    <!-- ISHUU WIN AADHIL WITH MUSIC -->
+</head>
+<body>
+
+<h1>🎧 Aziza&infin;Aadhil – Two Souls, One Rhythm</h1>
+
+{% for category, songs in music.items() %}
+  <h2>{{ category }}</h2>
+
+  <ul>
+    {% for song in songs %}
+      <li>
+        {{ song }}
+        <br>
+        <audio controls>
+          <source src="/static/source/{{ category }}/{{ song }}" type="audio/mpeg">
+        </audio>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+
+</body>
+</html>
